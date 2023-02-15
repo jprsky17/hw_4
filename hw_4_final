@@ -17,4 +17,4 @@ blastp -query mystery_protein_query.fasta -task blastp -db mystery_proteins -eva
 #9
 # gardenia jasminoides
 #10
-# gardenia gasminoides putative catalase mRNA, complete cds
+# gardenia gasminoides putative catalase
