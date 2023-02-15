@@ -11,7 +11,7 @@ sed -n '6p; 7p; 8p' nucleotide_blast | awk '$3 > 90' | awk '{print $2}' >> most_
 #6
 blastp -query mystery_protein_query.fasta -task blastp -db mystery_proteins -evalue 1e-5 -max_hsps 15 -outfmt 7 -out protein_blast
 #7 
-# P010027090796, P010027090798, P010027073865, and P010027077695 (lowest evalues)
+# P010027090796, P010027090798, P010027073865, and P010027077695 (lowest evalues, these 4 protein IDs had an evalue of zero)
 #8
 # coffea arabica
 #9
