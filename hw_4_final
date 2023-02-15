@@ -5,13 +5,13 @@
  #3
 blastn -query mystery_nucleotide_query.fasta -task megablast -db mystery_transcript -evalue 1e-3 -max_hsps 5 -outfmt 7 -out nucleotide_blast
 #4 
-# T010027234997   91.965
+# T010027234997   91.965 (highest sequence identitiy percentage)
 #5
 sed -n '6p; 7p; 8p' nucleotide_blast | awk '$3 > 90' | awk '{print $2}' >> most_similar.txt
 #6
 blastp -query mystery_protein_query.fasta -task blastp -db mystery_proteins -evalue 1e-5 -max_hsps 15 -outfmt 7 -out protein_blast
 #7 
-# P010027071558 and P010027071553
+# P010027090796, P010027090798, P010027073865, and P010027077695 (lowest evalues)
 #8
 # coffea arabica
 #9
