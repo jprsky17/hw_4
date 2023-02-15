@@ -5,7 +5,7 @@
  #3
 blastn -query mystery_nucleotide_query.fasta -task megablast -db mystery_transcript -evalue 1e-3 -max_hsps 5 -outfmt 7 -out nucleotide_blast
 #4 
-# T010027234997   91.965 , T010003453160   91.351, T010027234995   91.351
+# T010027234997   91.965
 #5
 sed -n '6p; 7p; 8p' nucleotide_blast | awk '$3 > 90' | awk '{print $2}' >> most_similar.txt
 #6
